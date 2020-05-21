@@ -24,8 +24,8 @@ plt.ylabel('SSE')
 plt.plot(X, SSE, 'o-')
 plt.show()
 
-# 聚类（根据上图显示k=3聚类效果最好）
-model = KMeans(n_clusters=3, n_jobs=4, max_iter=100)  # 聚3类、并发数4、最大循环次数100
+# 聚类（根据上图显示k=4聚类效果最好）
+model = KMeans(n_clusters=4, n_jobs=4, max_iter=100)  # 聚3类、并发数4、最大循环次数100
 model.fit(df1)
 # 简单打印结果
 r1 = pd.Series(model.labels_).value_counts() # 统计各个类别的数据
